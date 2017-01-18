@@ -1,6 +1,12 @@
 <h1>Show article</h1>
+
 <p>
   <h2><%= @article.title %></h2>
+</p>
+<p>
+  <% if @article.image.exists?  %>
+    <%= image_tag @article.image.url %>
+  <% end %>
 </p>
 <p>
   <%= @article.body %>
